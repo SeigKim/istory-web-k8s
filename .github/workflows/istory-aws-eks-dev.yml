@@ -134,12 +134,12 @@ jobs:
           --namespace=default \
           --dry-run=client -o yaml | kubectl apply -f -
 
-      - name: kustomize install
+      - name: 15.kustomize install
         run: |
             curl -s https://raw.githubusercontent.com/kubernetes-sigs/kustomize/master/hack/install_kustomize.sh | bash
             sudo mv kustomize /usr/local/bin
 
-      - name: kustomize update image yaml
+      - name: 16.kustomize update image yaml
         run: |
             cd overlay/aws-dev
             kustomize edit set image istory=SeigKim/istory:${{ github.run_number }}
