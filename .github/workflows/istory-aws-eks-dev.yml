@@ -105,7 +105,7 @@ jobs:
           repository: dangtong76/istory-platform   # 바꾸기
           ref: main # 바꾸기
           path: .
-          token: ${{ secrets.GIT_PAT }}          
+          token: ${{ secrets.GIT_PAT }}
 
       - name: Install kubectl
         run: |
