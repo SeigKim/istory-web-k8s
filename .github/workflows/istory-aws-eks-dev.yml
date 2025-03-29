@@ -142,7 +142,7 @@ jobs:
       - name: 16.kustomize update image yaml
         run: |
             cd overlay/aws-dev
-            kustomize edit set image istory=SeigKim/istory:${{ github.run_number }}
+            kustomize edit set image ${{ secrets.DOCKER_USERNAME }}=${{ secrets.DOCKER_USERNAME }}/istory:${{ github.run_number }}
 
       - name: 17.push yaml
         run: |
