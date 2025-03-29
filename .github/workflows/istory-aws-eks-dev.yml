@@ -141,7 +141,7 @@ jobs:
 
       - name: kustomize update image yaml
         run: |
-            cd overlay/awd-dev
+            cd overlay/aws-dev
             kustomize edit set image istory=SeigKim/istory:${{ github.run_number }}
 
       - name: 17.push yaml
