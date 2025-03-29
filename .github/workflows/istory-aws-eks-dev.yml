@@ -48,7 +48,6 @@ jobs:
           cat > src/main/resources/application.yml << EOF
           spring:
             datasource:
-              #url: ${{ secrets.DATABASE_URL }} # 예dbc:mysql://localhost:3306/istory
               url: jdbc:mysql:localhost:3306/istory
               username: ${{ secrets.MYSQL_USER }}
               password: ${{ secrets.MYSQL_PASSWORD }}
