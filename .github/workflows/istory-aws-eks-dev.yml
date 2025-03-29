@@ -107,9 +107,10 @@ jobs:
           path: .
           token: ${{ secrets.GIT_PAT }}
 
-      - name: Install kubectl
+      - name: 01.Install kubectl
         run: |
           KUBECTL_VERSION=$(curl -s https://dl.k8s.io/release/stable.txt)
+          echo "Kubernetes Version: ${KUBECTL_VERSION}"
           curl -LO "https://dl.k8s.io/release/${KUBECTL_VERSION}/bin/linux/amd64/kubectl"
           chmod +x kubectl
           sudo mv kubectl /usr/local/bin/
